@@ -1,0 +1,49 @@
+
+<div class="home-banner">
+<h1>
+ We want you to <span id="banner-typed-text"></span>
+</h1>
+</div>
+
+
+
+<div class="container">
+
+
+<div class="row">
+
+  <div class="col-xs-12">
+ <% @cocktails.each do |cocktail| %>
+
+<div class="card-product" >
+   <%= image_tag "colada.jpeg", alt: "Colada"%>
+    <div class="card-product-infos">
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <p>Enjoy a cocktail with <strong>caribbean flair</strong> and lay back.</p>
+  </div>
+
+</div>
+ <% end %>
+   </div>
+</div>
+
+<button class: "btn btn-primary">
+<%= link_to "Add a new cocktail", new_cocktail_path%>
+</button>
+
+
+</div>
+
+<div class="container">
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+</div>
+
+
